@@ -9,6 +9,6 @@ export class AuthController {
   @Post('login')
   async login(@Body() signInDto: Record<string, any>) {
     // รับ email และ password มาจาก Body
-    return this.authService.validateUser(signInDto.email, signInDto.password);
+    return this.authService.login(signInDto.email, signInDto.password);
   }
 }
